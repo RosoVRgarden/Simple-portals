@@ -22,19 +22,20 @@ public class telep : MonoBehaviour
 
     void Update()
     {
-        
+
     }
 
 
     private void OnTriggerEnter(Collider other)
     {
-        print ("trigger");
+        print("trigger");
 
         if (other.CompareTag("target1"))
         {
             print("yep");
 
             transform.position = targetPos1;
+            transform.Rotate(0f, 180f, 0f, Space.Self);
         }
 
         if (other.CompareTag("target2"))
@@ -42,6 +43,7 @@ public class telep : MonoBehaviour
             print("yep2");
 
             transform.position = targetPos2;
+            transform.Rotate(0f, 180f, 0f, Space.Self);
         }
     }
 
